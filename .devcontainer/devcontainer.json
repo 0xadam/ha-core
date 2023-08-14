@@ -5,8 +5,8 @@
   "postCreateCommand": "script/setup",
   "postStartCommand": "script/bootstrap",
   "containerEnv": { "DEVCONTAINER": "1" },
-  "appPort": ["8123:8124"],
-  "runArgs": ["-e", "GIT_EDITOR=code --wait"],
+  "appPort": ["8123:8123"],
+  "runArgs": ["--network=host", "-e", "GIT_EDITOR=code --wait"],
   "customizations": {
     "vscode": {
       "extensions": [
